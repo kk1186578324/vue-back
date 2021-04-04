@@ -5,6 +5,8 @@ let users = [
 ]
 let server = http.createServer((req,res)=>{
     res.setHeader('Access-Control-Allow-Origin','*')
+
+
     if(req.url==='/api/users'){
         res.end(JSON.stringify(users))
     }else {
